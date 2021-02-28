@@ -46,7 +46,7 @@ There's a section in this Readme file for your notes on each deliverable. As you
 
 **YOUR NOTES**
 ```
-
+I knew I had to fetch the Traveler from the db.json with the ID of 1, so I put '...travlers/1' in the fetch request. Then I took that promise and converted it to json. I used that object to alter the innerHTML of the Div that contains the traveler information.
 ```
 
 
@@ -54,7 +54,7 @@ There's a section in this Readme file for your notes on each deliverable. As you
 
 **YOUR NOTES**
 ```
-
+I used the same 'get' method for deliverable 1, just making sure to get all the animal sightings as an array. I then knew I could iterate over the array with forEach, taking a callback function. I did have to look back to the earlier challenges to copy the innerHTML, but I suppose I could have figured out my own html configuration. Lastly, I had to append each Li to the Ul parent element, so it would show on the DOM.
 ```
 
 
@@ -64,7 +64,7 @@ There's a section in this Readme file for your notes on each deliverable. As you
 
 **YOUR NOTES**
 ```
-
+I used the 'submit' event listener. I collected all the data from the form and compiled it into an object, which I passed into the body of a POST request to the server. Then I created 
 ```
 
 
@@ -74,7 +74,7 @@ There's a section in this Readme file for your notes on each deliverable. As you
 
 **YOUR NOTES**
 ```
-
+I got stuck on this only because the Like Button wasn't registering my clicks. I figured out to assign the event listener to the outer Div and listen only for the 'button' inside the div. The rest was just sending a patch request to the database and creating a "likes object" by increasing the likes by one. Then I set the textcontent to the p tag to ${likes + 1}
 ```
 
 
@@ -84,7 +84,7 @@ There's a section in this Readme file for your notes on each deliverable. As you
 
 **YOUR NOTES**
 ```
-
+I added a click listener on the header and used a ternary operator to turn it either black or green.
 ```
 
 
@@ -95,7 +95,7 @@ __________
 
 **YOUR NOTES**
 ```
-
+I just made sure to send a POST request to the DB before updating the HTML. Just like the submit form one.
 ```
 
 
