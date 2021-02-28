@@ -71,6 +71,7 @@ form.addEventListener('submit', function (event) {
         <p>${oneAnimalObj.description}</p>
         <img src="${oneAnimalObj.photo}" alt="${oneAnimalObj.species}"/>
         <a href="${oneAnimalObj.link}" target="_blank">Here's a video about the ${oneAnimalObj.species} species!</a>
+        <button id="delete"> Delete </button>
         </li>`;
         animalsUl.append(sightingLi);
     })
