@@ -46,7 +46,7 @@ There's a section in this Readme file for your notes on each deliverable. As you
 
 **YOUR NOTES**
 ```
-
+I fetch the traveler data from the database, then select each element and set the innerHTML for each to the appropriate matching data.
 ```
 
 
@@ -54,7 +54,7 @@ There's a section in this Readme file for your notes on each deliverable. As you
 
 **YOUR NOTES**
 ```
-
+I fetch the animal sightings from the database, then use a helper function to display all of the sighting info for each one in li elements, which I then append to the animal sightings ul.
 ```
 
 
@@ -64,7 +64,8 @@ There's a section in this Readme file for your notes on each deliverable. As you
 
 **YOUR NOTES**
 ```
-
+I add a listener to the form element and create a new object with the form input, then call a helper method to POST the info to the database. I then display the new animal on the page with my displayAnimalSighting helper method, after the new sighting has been successfully saved to the DB. I make the sighting IDs match the li ids for use in the delete/like deliverables later on.
+I hardcore travelerId to 1, since we only have one traveler, and set likes to 0 to start.
 ```
 
 
@@ -74,7 +75,7 @@ There's a section in this Readme file for your notes on each deliverable. As you
 
 **YOUR NOTES**
 ```
-
+I created a helper method to listen for clicks on the likes button on the traveler inside of the second .then block on my traveler fetch, since we need to know how many likes the traveler already has before updating them. I update the database based on the likes currently showing on the page, then display the new likes on the page.
 ```
 
 
@@ -84,7 +85,7 @@ There's a section in this Readme file for your notes on each deliverable. As you
 
 **YOUR NOTES**
 ```
-
+I created a .dark-green class in the CSS file, added a click listener on the header, and toggle the .dark-green class whenever a click is registered.
 ```
 
 
@@ -95,7 +96,7 @@ __________
 
 **YOUR NOTES**
 ```
-
+Already completed during the initial form handling - I create a new animal object using the info from the form, then use JSON.stringify to save it into the database, and call my helper function to show it on the page after it successfully saves.
 ```
 
 
@@ -103,7 +104,11 @@ __________
 
 **YOUR NOTES**
 ```
+I created a function to add listeners (for clicks in the animals list (for the delete deliverable below as well - event propagation!), and set the id of the li element that was clicked so I can tell the database what data will need to be changed.
 
+I match that a click occurs on a like button, then update the database for this particular sighting using the ID, and update the likes displayed on the page.
+
+I call the function to add the listeners after the animal sightings have been displayed on the page, since there would be no buttons to listen for events on before that.
 ```
 
 
@@ -112,6 +117,6 @@ __________
 
 **YOUR NOTES**
 ```
-
+I used the same listener from the previous deliverable,  but match for the delete button instead, and then delete the item from the database using the id that I set when the event was first registered.
 ```
 
