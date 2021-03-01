@@ -73,7 +73,6 @@ function addAnimalSighting(animalObj){
         })
         .then(response => response.json())
         .then(animalObj => {
-            console.log(animalObj)
             displayAnimalSighting(animalObj)
         })
         .catch(error => console.log(error.message))
@@ -85,7 +84,6 @@ function addAnimalListeners(){
         const id = event.target.parentNode.id
 
         if (event.target.matches("button.like-button")){
-            console.log(event.target)
             const likesEl = event.target.parentNode.querySelector("p")
             const likes = parseInt(likesEl.innerHTML) + 1
 
@@ -103,7 +101,6 @@ function addAnimalListeners(){
         }
 
         if (event.target.matches("button.delete-button")){
-            console.log("delete")
             fetch(animalSightingsUrl + id, {
                 method: 'DELETE'
             })
@@ -125,7 +122,6 @@ title.addEventListener('click', event => {
 //Add listener to form to process input
 form.addEventListener('submit', event => {
     event.preventDefault()
-    console.log(event)
     const newAnimal = {
         species : event.target.species.value,
         link : event.target.link.value,
