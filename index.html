@@ -5,14 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <script src="data.js"></script>
     <script src="index.js" defer></script>
 
     <title>Travel</title>
 </head>
 
 <body>
-    <h1 id="header"> Amazon Trip</h1>
+    <h1 id="header" style="color:green"> Amazon Trip</h1>
     <div class="traveler">
         <div id="profile">
             <img src="https://image.shutterstock.com/image-vector/ui-image-placeholder-wireframes-apps-260nw-1037719204.jpg"
@@ -31,16 +30,16 @@
     <form id="new-animal-sighting-form">
         <h4>Add New Animal Sighting Post</h4>
         <label>Species: </label>
-        <input type="text" placeholder="Species">
-
+        <input type="text" placeholder="Species" id="species">
+            <!-- add id for species so event handler can track input data -->
         <label>Video Link: </label>
-        <input type="text" placeholder="Video Link">
+        <input type="text" placeholder="Video Link" id="video">
 
         <label>Photo Link: </label>
-        <input type="text" placeholder="Photo Link">
+        <input type="text" placeholder="Photo Link" id="photo">
 
         <label>Description: </label>
-        <textarea placeholder="Description"></textarea>
+        <textarea placeholder="Description" id="description"></textarea>
 
         <input type="submit" value="Add Animal Sighting" />
     </form>
