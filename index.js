@@ -148,12 +148,12 @@ const handleSightingClick = (event) => {
         formUpdate.style.display = formUpdate.style.display === 'block' ? 'none' : 'block'
 
         if (formUpdate.style.display === 'block') {
-            const p = li.firstChild
+            const p = li.querySelector('p')
             formUpdate.addEventListener('submit', event => {
                 event.preventDefault()
                 const newDesc = event.target[0].value 
                 p.textContent = newDesc
-                formUpdate.reset()
+               
 
                 fetch(`http://localhost:3000/animalSightings/${li.dataset.id}`, {
                     method: 'PATCH',
@@ -165,6 +165,7 @@ const handleSightingClick = (event) => {
                 })
                     .then(response => response.json())
                     .then(data => console.log(data))
+                formUpdate.reset()
             })
         }
     }
