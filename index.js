@@ -68,28 +68,29 @@ const handleNewSighting = (event) => {
     const description = event.target[3].value
     formNew.reset()
 
-    const newSightingObj = {
-        travelerId: 1,
-        species: species,
-        photo: photo,
-        link: video,
-        description: description,
-        likes: 0
-    }
-
     fetch('http://localhost:3000/animalSightings', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
             'Accept': 'application/json'
         },
-        body: JSON.stringify(newSightingObj)
+        body: JSON.stringify({
+            travelerId: 1,
+            species: species,
+            photo: photo,
+            link: video,
+            description: description,
+            likes: 0
+        })
     })
         .then(response => response.json())
         .then(newSighting => {
             renderOneSighting(newSighting)
         })
-    
+        .catch((error) => {
+            alert("Oopsie!")
+            console.error('Error:', error)
+        })
 }
 
 formNew.addEventListener('submit', handleNewSighting)
@@ -145,7 +146,7 @@ const handleSightingClick = (event) => {
     else if (event.target.matches('button.toggle-update-form-button')) {
         const formUpdate = li.querySelector('form.update-form')
         formUpdate.style.display = formUpdate.style.display === 'block' ? 'none' : 'block'
-        
+
         if (formUpdate.style.display === 'block') {
             const p = li.firstChild
             formUpdate.addEventListener('submit', event => {

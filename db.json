@@ -62,6 +62,15 @@
       "description": "Wow what a big cat!",
       "likes": 3,
       "id": 7
+    },
+    {
+      "travelerId": 1,
+      "species": "Green Anaconda",
+      "photo": "https://i.pinimg.com/originals/b3/19/76/b31976cca8383d1b2eb67510b1603ae3.jpg",
+      "link": "https://www.youtube.com/watch?v=fXA36ZuT8yo",
+      "description": "Look how big this snake is!",
+      "likes": 1,
+      "id": 8
     }
   ]
 }
