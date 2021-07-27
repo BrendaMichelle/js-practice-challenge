@@ -47,7 +47,7 @@ When the page loads, the information about the traveler should display including
 
 **YOUR NOTES**
 ```
-
+Fetches the data from the json-server and assigns the corresponding data to the suitable element.
 ```
 
 
@@ -74,7 +74,7 @@ When the page loads, each animal sighting of the travler should appear on the pa
 
 **YOUR NOTES**
 ```
-
+Created a new fetch GET request and assigned the innerHTML of new "li" elements to the desired outputs and appended that to the ul#animals unordered list. Set the data-id outside the innerHTML so that I wouldn't end up with double bullet points (or in other words, an li element within another li element).
 ```
 
 
@@ -86,7 +86,7 @@ When the user submits the form to add a new animal sighting post, the animal sig
 
 **YOUR NOTES**
 ```
-
+Factored out the code that creates new list elements for each animal sighting and organized it as its own method. This method gets called when adding new sightings and also when rendering sightings from the json server. It creates the view for each sighting.
 ```
 
 
@@ -98,7 +98,7 @@ When the user clicks on the traveler's like button, the new number of likes shou
 
 **YOUR NOTES**
 ```
-
+Obtained the current number of likes from the json server and adds one to it for every click of the like button. This change is made in the database with a PATCH fetch() request that updates the number of likes of the traveler object. The likesVal variable is used to reference to the current number of likes at the instance of a click of the heart. This is then useful to update the number of likes to its new value in the database as well as on the screen.
 ```
 
 
@@ -109,7 +109,7 @@ When the user clicks on an animal sighting's like button, the new number of like
 
 **YOUR NOTES**
 ```
-
+Used a PATCH fetch() request and added an event listener to the like buttons on each sighting linking them to this fetch request. The fetch request is made to specific animal Sightings using their ids. This is configured as an optimistic rendering as the number of likes on the page increases before being updated in the json server.
 ```
 
 
@@ -120,7 +120,7 @@ When the user clicks on an animal sighting's delete button, that animal should b
 
 **YOUR NOTES**
 ```
-
+A DELETE fetch() request is sent to corresponding animal sightings using their ids. This fetch is linked with the delete request. This is set up as a pessimistic rendering as the sightings are removed from the page after being deleted from the json server.
 ```
 
 
@@ -130,7 +130,7 @@ When the user clicks on an animal sighting's 'toggle update form' button, that a
 
 **YOUR NOTES**
 ```
-
+Added an event listener to the toggle button. This event listener checks for the current state of the form's display and changes it to its opposite (i.e. if it's "block" changes it to "none" and vice versa).
 ```
 
 
@@ -141,6 +141,6 @@ When the user submits an animal sighting's update form, the updated animal sight
 
 **YOUR NOTES**
 ```
-
+Added an event listener to the update form and linked it with a fetch() PATCH request that updates the description attribute of a given object. It also sets the display of the form to "none" to create a more intuitive user interaction. It also uses a pessimistic rendering technique with the page being updated after the json server is updated. The event listener of the form doesn't have a reset() function for the form because it is more intuitive to provide the users with the pre-existing description when they want to update the description of a given sighting.
 ```
 
